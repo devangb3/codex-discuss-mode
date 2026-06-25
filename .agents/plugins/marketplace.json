@@ -1,0 +1,20 @@
+{
+  "name": "devang",
+  "interface": {
+    "displayName": "Devang Plugins"
+  },
+  "plugins": [
+    {
+      "name": "discuss-mode",
+      "source": {
+        "source": "local",
+        "path": "./plugins/discuss-mode"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

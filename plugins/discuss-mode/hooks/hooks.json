@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/scripts/user_prompt_submit.py",
+            "timeout": 5,
+            "statusMessage": "checking /discuss mode"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^apply_patch$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/scripts/pre_tool_use.py",
+            "timeout": 5,
+            "statusMessage": "enforcing /discuss mode"
+          }
+        ]
+      }
+    ]
+  }
+}

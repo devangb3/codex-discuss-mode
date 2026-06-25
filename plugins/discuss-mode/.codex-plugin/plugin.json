@@ -1,0 +1,30 @@
+{
+  "name": "discuss-mode",
+  "version": "0.1.0",
+  "description": "Adds a lightweight /discuss mode that keeps a Codex turn brainstorming-only and read-only.",
+  "author": {
+    "name": "OpenAI"
+  },
+  "license": "MIT",
+  "keywords": [
+    "discuss",
+    "hooks",
+    "read-only",
+    "brainstorming"
+  ],
+  "interface": {
+    "displayName": "Discuss Mode",
+    "shortDescription": "Read-only brainstorming guardrail for /discuss turns.",
+    "longDescription": "Adds hook-based /discuss handling that injects read-only guidance and blocks obvious mutating tool calls for the current turn.",
+    "developerName": "OpenAI",
+    "category": "Productivity",
+    "capabilities": [
+      "Hooks",
+      "Read-only guardrail"
+    ],
+    "defaultPrompt": [
+      "/discuss Review this change and tell me the risks."
+    ],
+    "brandColor": "#2563EB"
+  }
+}
