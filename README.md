@@ -26,13 +26,17 @@ plugin hook the first time it is discovered.
 
 ## Usage
 
-Include `/discuss` anywhere in your prompt:
+Include `/discuss` as an inline marker in your prompt. Avoid placing it at
+the very start of the prompt because Codex reserves leading `/...` input for
+slash commands:
 
 ```text
 Review this design /discuss before we implement it.
 ```
 
-The marker is case-sensitive and applies only to the current turn.
+The marker is case-sensitive and applies only to the current turn. Prefer using
+it after some leading text, such as `Review this design /discuss`, rather than
+starting the prompt with `/discuss`.
 
 ## Why this exists
 

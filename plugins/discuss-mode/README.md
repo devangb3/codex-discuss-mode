@@ -50,14 +50,18 @@ and install that copy as a local plugin.
 
 ## Usage
 
-Include `/discuss` in a prompt:
+Include `/discuss` as an inline marker in a prompt. Avoid placing it at the
+very start of the prompt because Codex reserves leading `/...` input for slash
+commands:
 
 ```text
-/discuss Review this module and tell me the risks before we implement anything.
+Review this module /discuss and tell me the risks before we implement anything.
 ```
 
 The `/discuss` marker is case-sensitive and only applies to the current turn.
-Use a later prompt without `/discuss` when you want Codex to implement changes.
+Prefer using it after some leading text, such as `Review this module /discuss`,
+rather than starting the prompt with `/discuss`. Use a later prompt without
+`/discuss` when you want Codex to implement changes.
 
 ## Tests
 
